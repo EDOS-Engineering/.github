@@ -12,7 +12,7 @@ We are a small, senior team with over a century of combined experience in softwa
 
 Our flagship product and the current center of our R&D effort. Orkestera is a **proactive, dark-factory agentic development engine** — a full workflow management suite for orchestrating LLM agent swarms at scale.
 
-At its core, Orkestera runs **SWABench** (Self-Writing Agent Benchmark): a competitive multi-engineer swarm workflow where parallel agents score against each other until work meets a pass threshold. No human in the loop. No babysitting. Just working software.
+At its core, Orkestera runs a competitive multi-engineer swarm workflow where parallel agents score against each other until work meets a pass threshold. No human in the loop. A human near the loop; no babysitting. Just working software.
 
 **Architecture:**
 

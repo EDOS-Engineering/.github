@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="320" viewBox="0 0 1280 320" role="img" aria-labelledby="t d">
+  <title id="t">EDOS Engineering</title>
+  <desc id="d">Agentic software, engineered to be trusted.</desc>
+  <defs>
+    <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#b5aaff"/>
+      <stop offset="1" stop-color="#49dcc5"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.82" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#b5aaff" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#283246" stroke-width="1" opacity="0.45"/>
+    </pattern>
+  </defs>
+  <rect width="1280" height="320" fill="#0d1117"/>
+  <rect width="1280" height="320" fill="url(#grid)"/>
+  <rect width="1280" height="320" fill="url(#glow)"/>
+
+  <g transform="translate(1050 160)" fill="none" stroke-linecap="round">
+    <circle r="112" stroke="#283246" stroke-width="2"/>
+    <circle r="112" stroke="url(#sweep)" stroke-width="3" stroke-dasharray="180 524">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="18s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="78" stroke="#283246" stroke-width="2"/>
+    <circle r="78" stroke="#49dcc5" stroke-width="3" stroke-dasharray="90 400">
+      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="11s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="44" stroke="#283246" stroke-width="2"/>
+    <circle r="44" stroke="#b5aaff" stroke-width="3" stroke-dasharray="60 217">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="7" fill="#f5f7fa" stroke="none"/>
+  </g>
+
+  <g font-family="Sora, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <text x="72" y="104" fill="#a9b6ca" font-size="18" letter-spacing="5">ENTERPRISE DEVOPS SOLUTIONS</text>
+    <text x="72" y="178" fill="#f5f7fa" font-size="64" font-weight="700" letter-spacing="-1.5">EDOS <tspan fill="url(#sweep)">Engineering</tspan></text>
+    <text x="72" y="230" fill="#a9b6ca" font-size="24">Agentic software, engineered to be trusted.</text>
+  </g>
+</svg>

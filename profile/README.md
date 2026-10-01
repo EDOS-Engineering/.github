@@ -12,7 +12,7 @@
 
 We build software that turns goals into finished, verified work, and we build the controls that let an organization trust it.
 
-EDOS began as a delivery consultancy: release pipelines, distributed systems, security, and observability for engineering teams at scale. We carried the pagers. That discipline is now a product. Our team is small and senior, with more than a century of combined delivery experience, and our standard has not changed: **ship things that work, or don't ship them.**
+EDOS began as a delivery consultancy: release pipelines, distributed systems, security, and observability for engineering teams at scale. We carried the pagers. That discipline is now a product. Our team is small and senior, with more than ninety years of combined experience in tech, and every one of us has thirty or more, and our standard has not changed: **ship things that work, or don't ship them.**
 
 ## Orkestera
 

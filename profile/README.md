@@ -3,57 +3,61 @@
 </p>
 
 <p align="center">
+  <a href="https://orkmeter.com"><b>orkmeter.com</b></a> &nbsp;·&nbsp;
   <a href="https://orkestera.com"><b>orkestera.com</b></a> &nbsp;·&nbsp;
-  <a href="https://edos.io"><b>edos.io</b></a> &nbsp;·&nbsp;
-  <a href="mailto:travis@edos.io"><b>travis@edos.io</b></a>
+  <a href="https://edos.io"><b>edos.io</b></a>
 </p>
 
 ---
 
-We build software that turns goals into finished, verified work, and we build the controls that let an organization trust it.
+EDOS builds tools for teams that work with AI coding agents: Ork Meter to see and cut what the agents spend, and Orkestera to run agent work you can review and audit.
 
-EDOS began as a delivery consultancy: release pipelines, distributed systems, security, and observability for engineering teams at scale. We carried the pagers. That discipline is now a product. Our team is small and senior: more than ninety years of combined experience in tech, and thirty or more for each of us. Our standard has not changed: **ship things that work, or don't ship them.**
+## Ork Meter
+
+**Count every token, make every token count.** [orkmeter.com](https://orkmeter.com)
+
+Ork Meter tracks your Claude Code and Codex usage in one live dashboard. **Ork Meter Plus** adds a plugin that trims noisy tool output before the agent reads it. Free to meter. No card. Only usage numbers leave your machine.
+
+In our benchmark, Plus used 29.3% fewer non-cached tokens across 1,524 heavy-output task attempts. ([Benchmark data](https://orkmeter.com/#benchmark))
+
+**Install** ([full guide](https://orkmeter.com/install)):
+
+```text
+# Claude Code 2.1.280 or later
+claude plugin marketplace add https://orkmeter.com/releases/claude/marketplace.json
+claude plugin install ork-meter@edos
+# then run /ork-meter:connect and restart Claude Code once
+
+# Codex
+codex plugin marketplace add EDOS-Engineering/ork-meter-codex
+codex plugin add ork-meter-codex@edos-codex
+# then run setup once, as shown at orkmeter.com/install
+```
 
 ## Orkestera
 
-**The agentic workflow management suite.** Orkestera is our flagship and the center of our R&D.
+**Autonomy you can audit.** [orkestera.com](https://orkestera.com)
 
-You state a goal. Orkestera decomposes it into tasks, plans each as a graph, executes every node, and scores the result against the goal before it counts as done. Every action is observable while it happens, and every control-plane change is recorded.
+Give work a goal. Follow its progress, review the result, and inspect the usage it records. Describe the work in Ork Chat; Orkestera breaks it into issues and runs it on its two core services:
 
-| | |
+- **GraphAgent** runs each workflow as a directed graph of plugin nodes, in an isolated workspace, checkpointing every node to a durable journal it can resume from.
+- **LLMProxy** routes GraphAgent's model calls to your configured provider and records model, usage and attribution, so cost lands against the work.
+
+Successful delivery opens a pull request on a separate branch. Orkestera is in active development with design partners. Run it on your own infrastructure and shape what ships next: [become a design partner](https://orkestera.com).
+
+## Public repositories
+
+| Repository | What it is |
 |---|---|
-| **Ork Chat** | Goal intake in conversation. Turn intent into dispatched, tracked work. |
-| **GraphAgent engine** | A whole-graph planner and executor that plans, runs, and scores each node of the work. |
-| **Watch** | Live observability: task boards, logs, inference traces, and side-by-side analysis of external agent runs. |
-| **Governance** | OAuth 2.1, per-organization SSO, scoped service tokens, durable audit history, and org policy applied to connected clients. |
-| **Inference routing** | Provider-agnostic. Priority fallback across hosted and self-hosted models. Swap the model, keep the workflow. |
-| **Analytics** | Per-organization usage and outcome analysis over curated, deduplicated history. |
+| [ork-meter-claude](https://github.com/EDOS-Engineering/ork-meter-claude) | Ork Meter plugin for Claude Code |
+| [ork-meter-codex](https://github.com/EDOS-Engineering/ork-meter-codex) | Ork Meter installer for the Codex CLI |
+| [orkestera-starter](https://github.com/Orkestera-Sandboxes/orkestera-starter) | Template repository for your first Orkestera task |
+| [reverb-marketplace](https://github.com/EDOS-Engineering/reverb-marketplace) | PHP and Laravel client for the Reverb.com marketplace API |
+| [rackoon-tycoon](https://github.com/EDOS-Engineering/rackoon-tycoon) | AWS Solutions Architect study guide and browser game |
 
-Orkestera runs in the cloud today across development, staging, and our own production environment, and it is built to run on-premises. Early access: **[orkestera.com](https://orkestera.com)**.
+## Contact
 
-## Around the platform
-
-**Commander 2: mission control on the desktop.**
-A native control surface for running agent workflows on your own machine. Connected to Orkestera, it streams run telemetry to the organization and applies the organization's policy locally. Disconnected, it is fully local.
-
-**dress-rehearsal: proof before production.**
-Seeded simulation testing for Orkestera, Commander 2, and the contract between them. One seed is one run: the same clients, faults, outages, and policy changes, in the same order, every time. Every failure is a seed we can replay, and the harness proves itself by catching bugs we plant on purpose.
-
-## Research
-
-**Recursive self-improvement.**
-A continuous improvement controller for quantized local models. Candidate components are proposed, trained, and quantized, then promoted only when they beat their parent on a sealed internal benchmark that keeps getting harder.
-
-**Powdered Stars.**
-A GPU-native 2D compressible hydrodynamics simulator in Rust and wgpu, with neutron and photon transport. Draw the starting conditions from a materials catalog, then watch pressure, energy, and radiation fields evolve live.
-
-## How we work
-
-- **A completed task is the only test.** Component checks are necessary. They are not sufficient. We promote on finished, verified work.
-- **Reproducible or it didn't happen.** Failures become seeds, regressions become tests, and planted defects prove the tests catch them.
-- **Humans near the loop.** Automation runs the loop. People set direction, approve results, and own the outcome.
-- **No lock-in.** Provider-agnostic inference, standard protocols, and infrastructure as code.
-- **Security first.** TLS on every boundary, encryption at rest, least-privilege service identities, and 2FA across the organization.
+[info@edos.io](mailto:info@edos.io) · Ork Meter support: [edos-labs@edos.io](mailto:edos-labs@edos.io) · Boise, Idaho
 
 ---
 
